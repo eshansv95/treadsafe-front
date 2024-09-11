@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREADSAFE</title>
+    <link rel="stylesheet" href="tread.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="loading">
+        Welcome to TreadSafe
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <div id="content">
+        <h1 id="head">TreadSafe</h1>
+        <p id="login">login here</p>
+        <input type="button" value="owner" id="admin">
+        <input type="button" value="driver" id="user">
+        
+        <p id="reg">haven't registered with us yet?</p>
+        <a id="link" href="form.html">click here</a>
+        
+        <p id="offer">What services we Offer</p>
+        <ol>
+            <li>Real Time Data Monitoring</li>
+            <li>Available Anywhere</li>
+            <li>Alerts depending on various factors such as 
+                tyre pressure, tyre temperature
+            </li>
+            <li>24/7 sensor check ups on call</li>
+        </ol>
+        
+        <p id="looks"><b>How it looks like</b></p>
+    </div>
+
+    <!-- Pressure Chart -->
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Temperature Chart -->
+    <div class="chart-container2">
+        <canvas id="tempChart"></canvas>
+    </div>
+    
+    <p id="chuuma">chuuma</p>
+    <script src="tread.js"></script>
+</body>
+</html>

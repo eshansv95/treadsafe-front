@@ -1,0 +1,201 @@
+html, body {
+    height: 100%; /* Ensure the body and html take full height of the viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative; /* Establish a positioning context */
+    font-family: Arial, sans-serif; /* Optional: Set a default font */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Use fixed to ensure it covers the viewport even on scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('backgroundtruck.jpeg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    opacity: 0.8; /* Set opacity of the background image */
+    z-index: -1; /* Place behind other content */
+}
+
+#login {
+    position: absolute;
+    top: 0px; /* Move higher on the page */
+    right: 85px; /* Align with the buttons */
+    font-size: 20px; /* Adjust text size */
+    color: whitesmoke;
+}
+
+#admin, #user {
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#admin {
+    top: 45px; /* Move higher to match the new "login here" position */
+    right: 10px;
+}
+
+#user {
+    top: 45px; /* Same top value as #admin */
+    right: 140px; /* Align next to #admin */
+}
+
+#reg {
+    position: absolute;
+    top: 90px; 
+    right: 10px; 
+    font-size: 16px; 
+    color: wheat;
+}
+
+#link {
+    position: absolute;
+    top: 125px; 
+    right: 10px; 
+    color: #1e88e5; 
+    text-decoration: none; 
+    font-size: 16px; 
+}
+
+#loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 9999; /* Ensure it's on top */
+}
+
+#content {
+    display: none;
+}
+
+.loading-bar-container {
+    width: 80%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 20px; /* Space between text and loading bar */
+}
+
+/* Actual loading bar */
+.loading-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    animation: load 1.5s linear forwards;
+}
+
+/* Animation for loading bar */
+@keyframes load {
+    100% {
+        width: 100%;
+    }
+}
+
+#truck {
+    position: absolute;
+    left: 300px;
+}
+
+#head {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(124, 177, 126);
+    padding: 10px;
+    width: 200px; /* Adjust width as needed */
+    text-align: center; /* Center text inside the header */
+}
+
+#offer {
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+ol {
+    width: 30%;
+    margin: 20px 0; /* Remove auto-centering and set margin for spacing */
+    padding: 0; /* Remove default padding */
+    list-style-position: inside; /* Ensure the numbers are inside the list */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    float: left; /* Position it to the left */
+}
+
+ol li {
+    padding: 12px; /* Add padding inside list items */
+    font-size: 18px; /* Font size */
+    border-bottom: 1px solid #ddd; /* Add bottom border to list items */
+    background-color: #4caf50; /* Green background for list items */
+    color: white; /* White text */
+}
+
+ol li:last-child {
+    border-bottom: none; /* Remove bottom border for the last item */
+}
+
+#looks {
+    position: absolute;
+    font-size: 40px;
+    top: 325px;
+    right: 600px;
+    color: rgb(10, 0, 0);
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center; /* Center the chart horizontally */
+    align-items: center; /* Center the chart vertically if needed */
+    height: 400px; /* Increase height to allow scrolling */
+    margin-top: 150px; /* Space from the top of the page to the chart container */
+}
+
+#myChart {
+    position: absolute;
+    top: 500px;
+    left:400px;
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    background-color: black;
+}
+#chuuma{
+    position: absolute;
+    top: 1500px;
+}
+.chart-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+#tempChart {
+    position: absolute;
+    top: 1000px;
+    left: 400px; /* Adjust position to require scrolling */
+    width: 200px;
+    height: 100px;
+    background-color: black;
+}
